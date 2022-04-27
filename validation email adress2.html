@@ -1,0 +1,26 @@
+<!-- programe to demostreate validation email adress-->
+<html>
+	<head>
+	<script type="text/javascript">
+	function check_email()
+	{
+	var email_add=document.getElementById("email").value
+	atpos=email_add.indexOf("@")
+	dotpos=email_add.lastIndexOf(".")
+	if(atpos<1||dotpos<atpos+2)
+		{
+		alert("Not valide email,please try again.");
+		return false
+		}
+		else
+		{
+		return true
+		}
+	}
+	</script>
+	</head>
+	<body>
+	Enter Email:<input type="text" id="email">
+	<input type="button" value="check email" onclick="return check_email()">
+	</body>
+	</html>
